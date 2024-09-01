@@ -1,0 +1,71 @@
+body{
+	padding: 20px;
+	margin: 0;
+	font-family: "Roboto", system-ui;
+}
+
+.jcsb{
+	display: flex;
+	justify-content: space-between;
+}
+.aic{
+	align-items: center;
+}
+.df{
+	display: flex;
+}
+
+.cycle .num{
+	background: #464646;
+	opacity: 0.46;
+	color: #fff;
+	height: 29px;
+	width: 29px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 7px;
+	font-size: 10px;
+	font-weight: 500;
+	margin-right: 15px;
+}
+
+.cycle .num_text, .cycle .wake{
+	font-weight: 500;
+	font-size: 12px;
+}
+.cycle .num_time{
+	font-size: 10px;
+	color: #656565;
+}
+.cycle{
+	border-bottom: 1px #CECECE solid;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+.banner{
+	height: 45vh;
+	border-radius: 25px;
+	background-image: url(https://img.freepik.com/premium-photo/beautiful-sunrise-mountains_783884-5064.jpg);
+	opacity: 0.9;
+	padding: 20px;
+	display: flex;
+    align-items: end;
+}
+.startTimePicker{
+	background: #464646;
+	opacity: 0.46;
+	width: 100%;
+	text-align: center;
+	padding: 13px 0;
+	border-radius: 10px;
+    color: #fff;
+}
+.startTimePicker input{
+	background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+font-size: 25px;
+}
