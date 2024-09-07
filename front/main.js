@@ -38,27 +38,29 @@ function addTimes(time1, time2) {
 
 function getCycles() {
     $('.cycles').html('')
-   let nowIterations = 1
-   let nowTime = timeString
-   let endTime
+    let nowIterations = 1
+    let nowTime = timeString
+    let endTime
 
-   $('.cycles').append('<div class="cycle jcsb aic"><div class="df"><div class="num">0</div> <div class="main"> <div class="num_text">Время засыпания</div> <div class="num_time"> <span>' + nowTime +'</span> <span> - </span> <span>' + addTimes(nowTime, timeToFall) +'</span> </div> </div></div><div class="wake">' + addTimes(nowTime, timeToFall) +'</div> </div>')
+    $('.cycles').append('<div class="cycle jcsb aic"><div class="df"><div class="num">0</div> <div class="main"> <div class="num_text">Время засыпания</div> <div class="num_time"> <span>' + nowTime +'</span> <span> - </span> <span>' + addTimes(nowTime, timeToFall) +'</span> </div> </div></div><div class="wake">' + addTimes(nowTime, timeToFall) +'</div> </div>')
 
 
-   nowTime = addTimes(nowTime, timeToFall)
+    nowTime = addTimes(nowTime, timeToFall)
 
-   while (nowIterations < maxIterations) {
-    endTime =  addTimes(nowTime, iterationTime)
-    $('.cycles').append('<div class="cycle jcsb aic"><div class="df"><div class="num">' + nowIterations +'</div> <div class="main"> <div class="num_text">#' + nowIterations +' цикл</div> <div class="num_time"> <span>' + nowTime +'</span> <span> - </span> <span>' + endTime +'</span> </div> </div></div><div class="wake">' + endTime +'</div> </div>')
+    while (nowIterations < maxIterations) {
+        endTime =  addTimes(nowTime, iterationTime)
+        $('.cycles').append('<div class="cycle jcsb aic"><div class="df"><div class="num">' + nowIterations +'</div> <div class="main"> <div class="num_text">#' + nowIterations +' цикл</div> <div class="num_time"> <span>' + nowTime +'</span> <span> - </span> <span>' + endTime +'</span> </div> </div></div><div class="wake">' + endTime +'</div> </div>')
 
-    nowTime = endTime
-    nowIterations++;
+        nowTime = endTime
+        nowIterations++;
+    }
 }
-}
 
 
 
-$('.banner input').on('input', function() {
+
+
+$('.result').click(function() {
    getCycles()
    timeString = $('.banner input').val()
-});
+})
